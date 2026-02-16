@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <div className="fade-in">
       {/* Hero */}
-      <section className="min-h-[85vh] flex items-center">
+      <section className="min-h-[55vh] flex items-center">
         <div className="max-w-5xl mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
           <div className="shrink-0">
             <Image
@@ -144,13 +144,13 @@ export default function Home() {
             <div className="flex gap-4">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 border border-[#e0e0e0] text-sm font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+                className="px-6 py-3 border border-[#e0e0e0] text-base font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
               >
                 Get in Touch
               </a>
@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="py-20 border-t border-[#e0e0e0]">
+      <section className="pt-8 pb-20 border-t border-[#e0e0e0]">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading id="about" label="About" title="Who I Am" />
           <div className="grid md:grid-cols-2 gap-12">
