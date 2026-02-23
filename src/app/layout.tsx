@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -43,6 +44,18 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HNLDKTVTJQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HNLDKTVTJQ');
+          `}
+        </Script>
       </body>
     </html>
   );
