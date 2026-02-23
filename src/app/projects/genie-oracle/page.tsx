@@ -7,17 +7,22 @@ export const metadata: Metadata = {
     "LLM-powered data analytics tools that scaled data access to 700+ non-technical government users.",
 };
 
+const bg = "#f5e8e8";
+const border = "#dfcaca";
+const accent = "#9a5858";
+
 export default function GenieOraclePage() {
   return (
     <div className="fade-in max-w-3xl mx-auto px-6 pt-28 pb-20">
       <Link
         href="/#projects"
-        className="text-sm text-blue-600 hover:text-blue-700 font-mono mb-8 inline-block"
+        className="text-sm mb-8 inline-block transition-opacity hover:opacity-70"
+        style={{ color: accent }}
       >
         &larr; Back to Projects
       </Link>
 
-      <p className="text-xs font-mono text-blue-600 mb-2 uppercase tracking-wider">
+      <p className="text-xs mb-2 uppercase tracking-wider" style={{ color: accent }}>
         EnterpriseSG &middot; Aug 2022 – Feb 2025
       </p>
       <h1 className="text-4xl font-bold mb-4">Genie + Oracle</h1>
@@ -29,7 +34,8 @@ export default function GenieOraclePage() {
         href="https://www.linkedin.com/posts/audrey-lok-6966ab178_innofest2024-ugcPost-7262806756706123776-D_X9"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block text-sm font-mono text-blue-600 hover:text-blue-700 mb-8 border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 transition-colors"
+        className="inline-block text-sm mb-8 rounded-lg px-4 py-2 transition-colors"
+        style={{ color: accent, border: `1.5px solid ${border}` }}
       >
         Spot me teaching SQL! (LinkedIn) &rarr;
       </a>
@@ -44,9 +50,10 @@ export default function GenieOraclePage() {
         ].map((m) => (
           <div
             key={m.label}
-            className="border border-[#e0e0e0] rounded-xl p-4 bg-[#f0efed] text-center"
+            className="rounded-xl p-4 text-center"
+            style={{ background: bg, border: `1.5px solid ${border}` }}
           >
-            <p className="text-2xl font-bold gradient-text">{m.value}</p>
+            <p className="text-2xl font-bold" style={{ color: accent }}>{m.value}</p>
             <p className="text-xs text-[#666] mt-1">{m.label}</p>
           </div>
         ))}
@@ -67,15 +74,15 @@ export default function GenieOraclePage() {
           <h2 className="text-xl font-bold text-black mb-3">What I Built</h2>
           <p className="mb-3">Two complementary LLM applications:</p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
-            <div className="border border-[#e0e0e0] rounded-xl p-4 bg-[#f0efed]">
-              <h3 className="font-bold text-blue-600 mb-2">Genie</h3>
+            <div className="rounded-xl p-4" style={{ background: bg, border: `1.5px solid ${border}` }}>
+              <h3 className="font-bold mb-2" style={{ color: accent }}>Genie</h3>
               <p className="text-sm">
                 Text-to-SQL tool enabling natural language database queries.
                 Reduced SQL writing time from 15 minutes to 30 seconds.
               </p>
             </div>
-            <div className="border border-[#e0e0e0] rounded-xl p-4 bg-[#f0efed]">
-              <h3 className="font-bold text-blue-600 mb-2">Oracle</h3>
+            <div className="rounded-xl p-4" style={{ background: bg, border: `1.5px solid ${border}` }}>
+              <h3 className="font-bold mb-2" style={{ color: accent }}>Oracle</h3>
               <p className="text-sm">
                 LLM chatbot for searching and summarizing meeting insights.
                 Reduced search time from 3 days to 4 hours.
@@ -131,7 +138,8 @@ export default function GenieOraclePage() {
             ].map((t) => (
               <span
                 key={t}
-                className="text-xs px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono"
+                className="text-xs px-3 py-1 rounded-full"
+                style={{ background: bg, color: accent }}
               >
                 {t}
               </span>

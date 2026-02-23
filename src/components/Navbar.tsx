@@ -7,9 +7,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#faf9f7]/80 backdrop-blur-md border-b border-[#e0e0e0]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf8f5]/80 backdrop-blur-md border-b border-[#e4d5ea]">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-mono text-lg font-bold tracking-tight hover:text-blue-600 transition-colors">
+        <Link href="/" className="font-mono text-lg font-bold tracking-tight hover:text-[#9b7aa0] transition-colors">
           TK
         </Link>
 
@@ -36,7 +36,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-[#e0e0e0] bg-[#faf9f7]/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-[#e4d5ea] bg-[#fdf8f5]/95 backdrop-blur-md">
           <div className="flex flex-col px-6 py-4 gap-4 text-sm">
             <Link href="/#about" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">About</Link>
             <Link href="/#projects" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">Projects</Link>

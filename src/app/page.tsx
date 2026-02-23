@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ExperienceRow, ExperienceCard } from "@/components/ExperienceRow";
 
 const projects = [
   {
@@ -10,6 +11,8 @@ const projects = [
       "97.5% reduction in prompt development time. Automated content moderation at global scale",
     tags: ["Flask", "FastAPI", "NextJS", "LLMs"],
     href: "/projects/policy2prompt",
+    bg: "#e8f0e4",
+    border: "#c4d4be",
   },
   {
     title: "Genie + Oracle",
@@ -18,6 +21,8 @@ const projects = [
       "700+ non-technical users querying data via natural language. Government's first LLM apps",
     tags: ["LangChain", "Python", "ReactJS", "SQL"],
     href: "/projects/genie-oracle",
+    bg: "#f5e8e8",
+    border: "#dfcaca",
   },
   {
     title: "Elevate Platform",
@@ -26,6 +31,8 @@ const projects = [
       "10x platform speed, 20+ API integrations. Enabled a $500K+ enterprise deal",
     tags: ["Django", "PostgreSQL", "AWS", "Docker"],
     href: "/projects/elevate",
+    bg: "#eae8f5",
+    border: "#cccae8",
   },
   {
     title: "MySoil",
@@ -33,6 +40,8 @@ const projects = [
     headline: "$60K revenue, top 3 Shopee seller. D2C customized soil venture",
     tags: ["E-commerce", "Operations", "Product"],
     href: "/projects/mysoil",
+    bg: "#e4efec",
+    border: "#bcd4ce",
   },
 ];
 
@@ -80,36 +89,42 @@ const experience = [
     company: "TikTok",
     period: "Feb 2025 – Aug 2025",
     location: "Singapore",
+    bg: "#e8f0e4",
   },
   {
     role: "AI Engineer (Part-Time)",
     company: "Terralab.ai",
     period: "Feb 2024 – May 2024",
     location: "Singapore",
+    bg: "#f5f0e0",
   },
   {
     role: "Business Partner / Technical PM",
     company: "EnterpriseSG",
     period: "Aug 2022 – Feb 2025",
     location: "Singapore",
+    bg: "#e4ecf5",
   },
   {
     role: "Software Engineer",
     company: "Elevate Security",
     period: "Jan 2021 – May 2022",
     location: "Berkeley, CA",
+    bg: "#f0e4e4",
   },
   {
     role: "PM Intern, Search",
     company: "Shopee",
     period: "Aug 2020 – Nov 2020",
     location: "Singapore",
+    bg: "#faecd8",
   },
   {
     role: "Lieutenant",
     company: "Singapore Armed Forces",
     period: "Jan 2016 – Nov 2017",
     location: "Singapore",
+    bg: "#ece8f5",
   },
 ];
 
@@ -125,32 +140,31 @@ export default function Home() {
               alt="Tishya Khanna"
               width={220}
               height={220}
-              className="rounded-full object-cover w-44 h-44 md:w-56 md:h-56 border-4 border-[#e0e0e0] shadow-lg"
+              className="rounded-full object-cover w-44 h-44 md:w-56 md:h-56 border-4 border-[#f0e8d8] shadow-md"
               priority
             />
           </div>
           <div>
-            <p className="text-sm font-mono text-blue-600 mb-4">Hi, I&apos;m</p>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
-              Tishya Khanna
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+              Hi, I&apos;m Tishya Khanna
             </h1>
-            <p className="text-xl md:text-2xl text-[#666] mb-6 max-w-2xl">
+            <p className="text-xl md:text-2xl text-[#555] mb-4 max-w-2xl">
               I build AI-powered products that ship to real users.
             </p>
-            <p className="text-sm text-[#333] mb-8 max-w-xl">
-              Cornell Tech M.Eng. CS &apos;26 &middot; Previously TikTok,
+            <p className="text-sm text-[#888] mb-8 max-w-xl">
+              Cornell Tech M.Eng, CS &apos;26 &middot; Previously TikTok,
               EnterpriseSG, Elevate Security
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-7 py-3 bg-[#c87960] text-white text-base font-medium rounded-full hover:bg-[#b56a50] transition-colors"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 border border-[#e0e0e0] text-base font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+                className="px-7 py-3 bg-[#7a9a68] text-white text-base font-medium rounded-full hover:bg-[#6a8a58] transition-colors"
               >
                 Get in Touch
               </a>
@@ -160,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="pt-8 pb-20 border-t border-[#e0e0e0]">
+      <section className="pt-8 pb-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading id="about" label="About" title="Who I Am" />
           <div className="grid md:grid-cols-2 gap-12">
@@ -185,7 +199,7 @@ export default function Home() {
               </p>
             </div>
             <div className="space-y-6">
-              <div className="border border-[#e0e0e0] rounded-xl p-5 bg-[#f0efed]">
+              <div className="rounded-xl p-5 bg-[#fdf8f5]" style={{ border: "2px solid #f0c4b0" }}>
                 <h3 className="font-bold mb-3">Education</h3>
                 <div className="space-y-3 text-sm">
                   <div>
@@ -206,7 +220,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="border border-[#e0e0e0] rounded-xl p-5 bg-[#f0efed]">
+              <div className="rounded-xl p-5 bg-[#fdf8f5]" style={{ border: "2px solid #b8d4ac" }}>
                 <h3 className="font-bold mb-3">What I&apos;m Looking For</h3>
                 <p className="text-sm text-[#666]">
                   Product Engineering roles where I can build AI-powered
@@ -219,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section className="py-20 border-t border-[#e0e0e0]">
+      <section className="py-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading
             id="projects"
@@ -235,67 +249,51 @@ export default function Home() {
       </section>
 
       {/* Experience */}
-      <section className="py-20 border-t border-[#e0e0e0]">
+      <section className="py-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading
             id="experience"
             label="Experience"
             title="Where I've Worked"
           />
-          <div className="space-y-0">
+          <div className="space-y-3">
             {experience.map((exp, i) => (
-              <div
-                key={i}
-                className="flex flex-col md:flex-row md:items-center justify-between py-5 border-b border-[#e0e0e0] hover:bg-[#f0efed] px-4 -mx-4 rounded-lg transition-colors"
-              >
-                <div>
-                  <h3 className="font-bold">{exp.role}</h3>
-                  <p className="text-[#666] text-sm">
-                    {exp.company} &middot; {exp.location}
-                  </p>
-                </div>
-                <p className="text-[#333] text-sm font-mono mt-1 md:mt-0">
-                  {exp.period}
-                </p>
-              </div>
+              <ExperienceRow key={i} {...exp} />
             ))}
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <div className="border border-[#e0e0e0] rounded-xl p-5 bg-[#f0efed]">
-              <p className="text-xl font-bold gradient-text">Otterfunds</p>
-              <p className="text-sm text-[#666] mt-1">
-                Fund monitoring tool &middot; ReactJS + Go &middot; 3x sales
-                increase
-              </p>
-            </div>
-            <div className="border border-[#e0e0e0] rounded-xl p-5 bg-[#f0efed]">
-              <p className="text-xl font-bold gradient-text">MySoil</p>
-              <p className="text-sm text-[#666] mt-1">
-                D2C venture &middot; $60K revenue &middot; Top 3 Shopee seller
-              </p>
-            </div>
+          <div className="mt-4 grid grid-cols-2 gap-3">
+            <ExperienceCard
+              title="Otterfunds"
+              description="Fund monitoring tool · ReactJS + Go · 3x sales increase"
+              bg="#ece8f5"
+            />
+            <ExperienceCard
+              title="MySoil"
+              description="D2C venture · $60K revenue · Top 3 Shopee seller"
+              bg="#fad8b4"
+            />
           </div>
         </div>
       </section>
 
       {/* Skills */}
-      <section className="py-20 border-t border-[#e0e0e0]">
+      <section className="py-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6">
           <SectionHeading id="skills" label="Skills" title="Tech Stack" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(skills).map(([category, items]) => (
               <div
                 key={category}
-                className="border border-[#e0e0e0] rounded-xl p-5 bg-[#f0efed]"
+                className="border border-[#e4d5ea] rounded-xl p-5 bg-[#f8f3fb]"
               >
-                <h3 className="font-bold text-sm mb-3 text-blue-600 font-mono uppercase">
+                <h3 className="font-bold text-sm mb-3 text-[#9b7aa0] font-mono uppercase">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {items.map((skill) => (
                     <span
                       key={skill}
-                      className="text-xs px-2 py-1 rounded bg-blue-50 text-[#333]"
+                      className="text-xs px-2 py-1 rounded bg-[#f0e8f4] text-[#2c2622]"
                     >
                       {skill}
                     </span>
@@ -311,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="py-20 border-t border-[#e0e0e0]">
+      <section className="py-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <SectionHeading id="contact" label="Contact" title="Let's Connect" />
           <p className="text-[#666] mb-8 max-w-lg mx-auto">
@@ -322,7 +320,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:tk732@cornell.edu"
-              className="px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-7 py-3 bg-[#c87960] text-white text-sm font-medium rounded-full hover:bg-[#b56a50] transition-colors"
             >
               tk732@cornell.edu
             </a>
@@ -330,7 +328,7 @@ export default function Home() {
               href="https://linkedin.com/in/tishyakhanna9"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-[#e0e0e0] text-sm font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+              className="px-7 py-3 bg-[#7a9a68] text-white text-sm font-medium rounded-full hover:bg-[#6a8a58] transition-colors"
             >
               LinkedIn
             </a>
@@ -338,7 +336,7 @@ export default function Home() {
               href="https://github.com/tishyakhanna97"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-[#e0e0e0] text-sm font-medium rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+              className="px-7 py-3 bg-[#7a98b8] text-white text-sm font-medium rounded-full hover:bg-[#6a88a8] transition-colors"
             >
               GitHub
             </a>

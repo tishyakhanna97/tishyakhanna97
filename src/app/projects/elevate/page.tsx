@@ -7,17 +7,22 @@ export const metadata: Metadata = {
     "10x platform speed improvement and 20+ API integrations for enterprise human risk management.",
 };
 
+const bg = "#eae8f5";
+const border = "#cccae8";
+const accent = "#6060a0";
+
 export default function ElevatePage() {
   return (
     <div className="fade-in max-w-3xl mx-auto px-6 pt-28 pb-20">
       <Link
         href="/#projects"
-        className="text-sm text-blue-600 hover:text-blue-700 font-mono mb-8 inline-block"
+        className="text-sm mb-8 inline-block transition-opacity hover:opacity-70"
+        style={{ color: accent }}
       >
         &larr; Back to Projects
       </Link>
 
-      <p className="text-xs font-mono text-blue-600 mb-2 uppercase tracking-wider">
+      <p className="text-xs mb-2 uppercase tracking-wider" style={{ color: accent }}>
         Elevate Security &middot; Jan 2021 – May 2022
       </p>
       <h1 className="text-4xl font-bold mb-4">Elevate Platform</h1>
@@ -36,9 +41,10 @@ export default function ElevatePage() {
         ].map((m) => (
           <div
             key={m.label}
-            className="border border-[#e0e0e0] rounded-xl p-4 bg-[#f0efed] text-center"
+            className="rounded-xl p-4 text-center"
+            style={{ background: bg, border: `1.5px solid ${border}` }}
           >
-            <p className="text-2xl font-bold gradient-text">{m.value}</p>
+            <p className="text-2xl font-bold" style={{ color: accent }}>{m.value}</p>
             <p className="text-xs text-[#666] mt-1">{m.label}</p>
           </div>
         ))}
@@ -107,7 +113,8 @@ export default function ElevatePage() {
             ].map((t) => (
               <span
                 key={t}
-                className="text-xs px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono"
+                className="text-xs px-3 py-1 rounded-full"
+                style={{ background: bg, color: accent }}
               >
                 {t}
               </span>

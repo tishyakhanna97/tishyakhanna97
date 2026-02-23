@@ -8,17 +8,22 @@ export const metadata: Metadata = {
     "D2C customized soil venture with $60K revenue and top 3 Shopee seller status.",
 };
 
+const bg = "#e4efec";
+const border = "#bcd4ce";
+const accent = "#4a8878";
+
 export default function MySoilPage() {
   return (
     <div className="fade-in max-w-3xl mx-auto px-6 pt-28 pb-20">
       <Link
         href="/#projects"
-        className="text-sm text-blue-600 hover:text-blue-700 font-mono mb-8 inline-block"
+        className="text-sm mb-8 inline-block transition-opacity hover:opacity-70"
+        style={{ color: accent }}
       >
         &larr; Back to Projects
       </Link>
 
-      <p className="text-xs font-mono text-blue-600 mb-2 uppercase tracking-wider">
+      <p className="text-xs mb-2 uppercase tracking-wider" style={{ color: accent }}>
         Founder &middot; 2021 – 2022
       </p>
       <h1 className="text-4xl font-bold mb-4">MySoil</h1>
@@ -29,7 +34,8 @@ export default function MySoilPage() {
         href="/mysoil-pitch-deck.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block text-sm font-mono text-blue-600 hover:text-blue-700 mb-8 border border-blue-200 rounded-lg px-4 py-2 hover:bg-blue-50 transition-colors"
+        className="inline-block text-sm mb-8 rounded-lg px-4 py-2 transition-colors"
+        style={{ color: accent, border: `1.5px solid ${border}` }}
       >
         View Pitch Deck (PDF) &rarr;
       </a>
@@ -44,9 +50,10 @@ export default function MySoilPage() {
         ].map((m) => (
           <div
             key={m.label}
-            className="border border-[#e0e0e0] rounded-xl p-4 bg-[#f0efed] text-center"
+            className="rounded-xl p-4 text-center"
+            style={{ background: bg, border: `1.5px solid ${border}` }}
           >
-            <p className="text-2xl font-bold gradient-text">{m.value}</p>
+            <p className="text-2xl font-bold" style={{ color: accent }}>{m.value}</p>
             <p className="text-xs text-[#666] mt-1">{m.label}</p>
           </div>
         ))}
@@ -54,7 +61,7 @@ export default function MySoilPage() {
 
       {/* Screenshots */}
       <div className="grid grid-cols-2 gap-4 mb-12 items-start">
-        <div className="border border-[#e0e0e0] rounded-xl overflow-hidden bg-[#f0efed]">
+        <div className="rounded-xl overflow-hidden" style={{ border: `1.5px solid ${border}` }}>
           <Image
             src="/images/first_big_sale.png"
             alt="Top 3 soil seller on Shopee"
@@ -63,7 +70,7 @@ export default function MySoilPage() {
             className="w-full h-auto"
           />
         </div>
-        <div className="border border-[#e0e0e0] rounded-xl overflow-hidden bg-[#f0efed]">
+        <div className="rounded-xl overflow-hidden" style={{ border: `1.5px solid ${border}` }}>
           <Image
             src="/images/photo_6053144294019150551_y.jpg"
             alt="MySoil first big sale"
@@ -113,11 +120,11 @@ export default function MySoilPage() {
         <section>
           <h2 className="text-xl font-bold text-black mb-3">By the Numbers</h2>
           <div className="grid grid-cols-2 gap-4 text-sm">
-            <div className="border border-[#e0e0e0] rounded-lg p-3 bg-[#f0efed]">
+            <div className="rounded-lg p-3" style={{ background: bg, border: `1.5px solid ${border}` }}>
               <p className="text-[#666]">Shopee</p>
               <p className="font-bold">4,992 products &middot; $52,745</p>
             </div>
-            <div className="border border-[#e0e0e0] rounded-lg p-3 bg-[#f0efed]">
+            <div className="rounded-lg p-3" style={{ background: bg, border: `1.5px solid ${border}` }}>
               <p className="text-[#666]">Lazada</p>
               <p className="font-bold">776 products &middot; $7,913</p>
             </div>
