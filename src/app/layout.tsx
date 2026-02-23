@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Tishya Khanna | Software Engineer, AI Builder",
@@ -37,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${roboto.variable} ${robotoMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
