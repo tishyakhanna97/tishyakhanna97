@@ -18,7 +18,7 @@ const projects = [
     title: "Genie + Oracle",
     org: "EnterpriseSG",
     headline:
-      "700+ non-technical users querying data via natural language. Government's first LLM apps",
+      "800+ non-technical users querying data via natural language. Agency's first LLM apps",
     tags: ["LangChain", "Python", "ReactJS", "SQL"],
     href: "/projects/genie-oracle",
     bg: "#f5e8e8",
@@ -45,7 +45,9 @@ const projects = [
   },
 ];
 
-const skills = {
+type Skill = string | { label: string; href: string };
+
+const skills: Record<string, Skill[]> = {
   Languages: [
     "Python",
     "TypeScript",
@@ -74,7 +76,10 @@ const skills = {
     "Prompt Engineering",
   ],
   Infrastructure: [
-    "AWS (Certified)",
+    {
+      label: "AWS (Certified)",
+      href: "https://www.credly.com/badges/4d7fa4f4-c4b2-419c-ac66-1325a69b6351/public_url",
+    },
     "Docker",
     "CI/CD",
     "PostgreSQL",
@@ -149,7 +154,7 @@ export default function Home() {
               Hi, I&apos;m Tishya Khanna
             </h1>
             <p className="text-xl md:text-2xl text-[#555] mb-4 max-w-2xl">
-              I build AI-powered products that ship to real users.
+              Tinkering and building!
             </p>
             <p className="text-sm text-[#888] mb-8 max-w-xl">
               Cornell Tech M.Eng, CS &apos;26 &middot; Previously TikTok,
@@ -199,7 +204,10 @@ export default function Home() {
               </p>
             </div>
             <div className="space-y-6">
-              <div className="rounded-xl p-5 bg-[#fdf8f5]" style={{ border: "2px solid #f0c4b0" }}>
+              <div
+                className="rounded-xl p-5 bg-[#fdf8f5]"
+                style={{ border: "2px solid #f0c4b0" }}
+              >
                 <h3 className="font-bold mb-3">Education</h3>
                 <div className="space-y-3 text-sm">
                   <div>
@@ -220,7 +228,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="rounded-xl p-5 bg-[#fdf8f5]" style={{ border: "2px solid #b8d4ac" }}>
+              <div
+                className="rounded-xl p-5 bg-[#fdf8f5]"
+                style={{ border: "2px solid #b8d4ac" }}
+              >
                 <h3 className="font-bold mb-3">What I&apos;m Looking For</h3>
                 <p className="text-sm text-[#666]">
                   Product Engineering roles where I can build AI-powered
@@ -261,16 +272,22 @@ export default function Home() {
               <ExperienceRow key={i} {...exp} />
             ))}
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-3">
+          <p className="mt-8 mb-3 text-xs font-mono uppercase tracking-widest text-[#9b7aa0] font-bold">
+            Entrepreneurship
+          </p>
+          <div className="grid grid-cols-2 gap-3">
             <ExperienceCard
               title="Otterfunds"
               description="Fund monitoring tool · ReactJS + Go · 3x sales increase"
               bg="#ece8f5"
+              href="https://github.com/tishyakhanna97/aia-finance"
+              external
             />
             <ExperienceCard
               title="MySoil"
               description="D2C venture · $60K revenue · Top 3 Shopee seller"
-              bg="#fad8b4"
+              bg="#e4efec"
+              href="/projects/mysoil"
             />
           </div>
         </div>
@@ -290,21 +307,33 @@ export default function Home() {
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="text-xs px-2 py-1 rounded bg-[#f0e8f4] text-[#2c2622]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {items.map((skill) => {
+                    const label =
+                      typeof skill === "string" ? skill : skill.label;
+                    const href = typeof skill === "string" ? null : skill.href;
+                    return href ? (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs px-2 py-1 rounded bg-[#f0e8f4] text-[#2c2622] underline hover:text-[#c87960] transition-colors"
+                      >
+                        {label}
+                      </a>
+                    ) : (
+                      <span
+                        key={label}
+                        className="text-xs px-2 py-1 rounded bg-[#f0e8f4] text-[#2c2622]"
+                      >
+                        {label}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#333] mt-4 font-mono">
-            AWS Certified Solutions Architect
-          </p>
         </div>
       </section>
 

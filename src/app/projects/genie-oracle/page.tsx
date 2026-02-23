@@ -22,12 +22,15 @@ export default function GenieOraclePage() {
         &larr; Back to Projects
       </Link>
 
-      <p className="text-xs mb-2 uppercase tracking-wider" style={{ color: accent }}>
+      <p
+        className="text-xs mb-2 uppercase tracking-wider"
+        style={{ color: accent }}
+      >
         EnterpriseSG &middot; Aug 2022 – Feb 2025
       </p>
       <h1 className="text-4xl font-bold mb-4">Genie + Oracle</h1>
       <p className="text-xl text-[#666] mb-4">
-        700+ non-technical users querying data via natural language.
+        800+ non-technical users querying data via natural language.
         Agency&apos;s first LLM applications
       </p>
       <a
@@ -43,7 +46,7 @@ export default function GenieOraclePage() {
       {/* Metrics */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         {[
-          { value: "700+", label: "Active users" },
+          { value: "800+", label: "Active users" },
           { value: "1,060", label: "Prompts processed" },
           { value: "36%", label: "SQL query increase" },
           { value: "4/5", label: "User satisfaction" },
@@ -53,7 +56,9 @@ export default function GenieOraclePage() {
             className="rounded-xl p-4 text-center"
             style={{ background: bg, border: `1.5px solid ${border}` }}
           >
-            <p className="text-2xl font-bold" style={{ color: accent }}>{m.value}</p>
+            <p className="text-2xl font-bold" style={{ color: accent }}>
+              {m.value}
+            </p>
             <p className="text-xs text-[#666] mt-1">{m.label}</p>
           </div>
         ))}
@@ -74,15 +79,25 @@ export default function GenieOraclePage() {
           <h2 className="text-xl font-bold text-black mb-3">What I Built</h2>
           <p className="mb-3">Two complementary LLM applications:</p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
-            <div className="rounded-xl p-4" style={{ background: bg, border: `1.5px solid ${border}` }}>
-              <h3 className="font-bold mb-2" style={{ color: accent }}>Genie</h3>
+            <div
+              className="rounded-xl p-4"
+              style={{ background: bg, border: `1.5px solid ${border}` }}
+            >
+              <h3 className="font-bold mb-2" style={{ color: accent }}>
+                Genie
+              </h3>
               <p className="text-sm">
                 Text-to-SQL tool enabling natural language database queries.
                 Reduced SQL writing time from 15 minutes to 30 seconds.
               </p>
             </div>
-            <div className="rounded-xl p-4" style={{ background: bg, border: `1.5px solid ${border}` }}>
-              <h3 className="font-bold mb-2" style={{ color: accent }}>Oracle</h3>
+            <div
+              className="rounded-xl p-4"
+              style={{ background: bg, border: `1.5px solid ${border}` }}
+            >
+              <h3 className="font-bold mb-2" style={{ color: accent }}>
+                Oracle
+              </h3>
               <p className="text-sm">
                 LLM chatbot for searching and summarizing meeting insights.
                 Reduced search time from 3 days to 4 hours.

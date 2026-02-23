@@ -31,19 +31,32 @@ interface ExpCardProps {
   title: string;
   description: string;
   bg: string;
+  href?: string;
+  external?: boolean;
 }
 
-export function ExperienceCard({ title, description, bg }: ExpCardProps) {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <div
-      className="rounded-2xl p-5 transition-colors duration-200"
-      style={{ background: hovered ? bg : "transparent" }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <p className="text-xl font-bold">{title}</p>
+export function ExperienceCard({ title, description, bg, href, external }: ExpCardProps) {
+  const inner = (
+    <>
+      <p className="text-xl font-bold underline decoration-[#aaa] underline-offset-2">{title}</p>
       <p className="text-sm text-[#666] mt-1">{description}</p>
+    </>
+  );
+  if (href) {
+    return (
+      <a
+        href={href}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="rounded-2xl p-5 block hover:brightness-95 transition-[filter]"
+        style={{ background: bg }}
+      >
+        {inner}
+      </a>
+    );
+  }
+  return (
+    <div className="rounded-2xl p-5" style={{ background: bg }}>
+      {inner}
     </div>
   );
 }
