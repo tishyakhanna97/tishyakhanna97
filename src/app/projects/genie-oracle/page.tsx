@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Genie + Oracle | EnterpriseSG | Tishya Khanna",
   description:
-    "LLM-powered data analytics tools that scaled data access to 700+ non-technical government users.",
+    "LLM-powered data analytics tools that scaled data access to 800+ non-technical government users.",
 };
 
 const bg = "#f5e8e8";

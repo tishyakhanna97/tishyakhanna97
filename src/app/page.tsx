@@ -193,7 +193,7 @@ export default function Home() {
               <p>
                 At TikTok, I automated content moderation for 800+ global
                 policies. At EnterpriseSG, I launched the agency&apos;s first
-                LLM tools for 700+ non-technical users. At Elevate Security, I
+                LLM tools for 800+ non-technical users. At Elevate Security, I
                 optimized databases 10x and built 20+ enterprise integrations.
               </p>
               <p>
