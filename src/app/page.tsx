@@ -178,70 +178,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
-      <section className="pt-8 pb-20 border-t border-[#e4d5ea]">
-        <div className="max-w-5xl mx-auto px-6">
-          <SectionHeading id="about" label="About" title="Who I Am" />
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-4 text-[#333] leading-relaxed">
-              <p>
-                I&apos;m a software engineer and AI builder with 4+ years of
-                experience shipping products across startups, government, and
-                big tech. My work sits at the intersection of deep engineering
-                and real user impact.
-              </p>
-              <p>
-                At TikTok, I automated content moderation for 800+ global
-                policies. At EnterpriseSG, I launched the agency&apos;s first
-                LLM tools for 800+ non-technical users. At Elevate Security, I
-                optimized databases 10x and built 20+ enterprise integrations.
-              </p>
-              <p>
-                Before tech, I served as a Lieutenant in the Singapore Armed
-                Forces, training 400+ Officer Cadets. I also built MySoil, a D2C
-                venture that hit $60K in revenue. I&apos;m currently finishing
-                my M.Eng. in Computer Science at Cornell Tech.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <div
-                className="rounded-xl p-5 bg-[#fdf8f5]"
-                style={{ border: "2px solid #f0c4b0" }}
-              >
-                <h3 className="font-bold mb-3">Education</h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="font-medium">
-                      Cornell Tech, Cornell University
-                    </p>
-                    <p className="text-[#666]">
-                      M.Eng. Computer Science &middot; 2026
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-medium">
-                      National University of Singapore
-                    </p>
-                    <p className="text-[#666]">
-                      B.Eng. CS, Honors with Distinction &middot; 2022
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="rounded-xl p-5 bg-[#fdf8f5]"
-                style={{ border: "2px solid #b8d4ac" }}
-              >
-                <h3 className="font-bold mb-3">What I&apos;m Looking For</h3>
-                <p className="text-sm text-[#666]">
-                  Product Engineering roles where I can build AI-powered
-                  products that reach real users. Graduating May 2026.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Projects */}
       <section className="py-20 border-t border-[#e4d5ea]">
@@ -289,6 +225,31 @@ export default function Home() {
               bg="#e4efec"
               href="/projects/mysoil"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="py-20 border-t border-[#e4d5ea]">
+        <div className="max-w-5xl mx-auto px-6">
+          <SectionHeading id="education" label="Education" title="Where I Studied" />
+          <div className="grid md:grid-cols-2 gap-6">
+            <div
+              className="rounded-xl p-8 bg-[#fdf8f5]"
+              style={{ border: "2px solid #f0c4b0" }}
+            >
+              <p className="text-xs font-mono uppercase tracking-widest text-[#c87960] font-bold mb-3">2024 – 2026</p>
+              <p className="font-semibold text-lg">Cornell Tech, Cornell University</p>
+              <p className="text-[#666] mt-1">M.Eng. Computer Science</p>
+            </div>
+            <div
+              className="rounded-xl p-8 bg-[#fdf8f5]"
+              style={{ border: "2px solid #b8d4ac" }}
+            >
+              <p className="text-xs font-mono uppercase tracking-widest text-[#7a9a68] font-bold mb-3">2018 – 2022</p>
+              <p className="font-semibold text-lg">National University of Singapore</p>
+              <p className="text-[#666] mt-1">B.Eng. Computer Science, Honors with Distinction</p>
+            </div>
           </div>
         </div>
       </section>
