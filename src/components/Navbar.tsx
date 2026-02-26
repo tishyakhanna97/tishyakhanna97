@@ -15,11 +15,11 @@ export function Navbar() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm">
-          <Link href="/#about" className="text-[#666] hover:text-black transition-colors">About</Link>
           <Link href="/#projects" className="text-[#666] hover:text-black transition-colors">Projects</Link>
           <Link href="/#experience" className="text-[#666] hover:text-black transition-colors">Experience</Link>
           <Link href="/#skills" className="text-[#666] hover:text-black transition-colors">Skills</Link>
           <Link href="/#contact" className="text-[#666] hover:text-black transition-colors">Contact</Link>
+          <a href="https://drive.google.com/file/d/1YAPGWVCmWJwWnBjiu8HxHXg87Xnfh_dv/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-4 py-1.5 rounded-full text-sm font-medium bg-[#c87960] text-white hover:bg-[#b56a50] transition-colors">Resume</a>
         </div>
 
         {/* Mobile toggle */}
@@ -38,11 +38,11 @@ export function Navbar() {
       {open && (
         <div className="md:hidden border-t border-[#e4d5ea] bg-[#fdf8f5]/95 backdrop-blur-md">
           <div className="flex flex-col px-6 py-4 gap-4 text-sm">
-            <Link href="/#about" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">About</Link>
             <Link href="/#projects" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">Projects</Link>
             <Link href="/#experience" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">Experience</Link>
             <Link href="/#skills" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">Skills</Link>
             <Link href="/#contact" onClick={() => setOpen(false)} className="text-[#666] hover:text-black">Contact</Link>
+            <a href="https://drive.google.com/file/d/1YAPGWVCmWJwWnBjiu8HxHXg87Xnfh_dv/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[#c87960] hover:text-[#b56a50] font-medium">Resume</a>
           </div>
         </div>
       )}

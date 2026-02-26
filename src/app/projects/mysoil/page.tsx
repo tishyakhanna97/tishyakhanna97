@@ -31,7 +31,7 @@ export default function MySoilPage() {
         $60K revenue, top 3 Shopee seller. D2C customized soil venture
       </p>
       <a
-        href="/mysoil-pitch-deck.pdf"
+        href="https://drive.google.com/file/d/1hhD-L-XURvRKNqffGD2oqLLtVoHx4XXW/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block text-sm mb-8 rounded-lg px-4 py-2 transition-colors"
