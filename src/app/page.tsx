@@ -153,9 +153,6 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
               Hi, I&apos;m Tishya Khanna
             </h1>
-            <p className="text-xl md:text-2xl text-[#555] mb-4 max-w-2xl">
-              Tinkering and building!
-            </p>
             <p className="text-sm text-[#888] mb-8 max-w-xl">
               Cornell Tech M.Eng, CS &apos;26 &middot; Previously TikTok,
               EnterpriseSG, Elevate Security
@@ -177,7 +174,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Projects */}
       <section className="py-20 border-t border-[#e4d5ea]">
@@ -232,23 +228,37 @@ export default function Home() {
       {/* Education */}
       <section className="py-20 border-t border-[#e4d5ea]">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionHeading id="education" label="Education" title="Where I Studied" />
+          <SectionHeading
+            id="education"
+            label="Education"
+            title="Where I Studied"
+          />
           <div className="grid md:grid-cols-2 gap-6">
             <div
               className="rounded-xl p-8 bg-[#fdf8f5]"
               style={{ border: "2px solid #f0c4b0" }}
             >
-              <p className="text-xs font-mono uppercase tracking-widest text-[#c87960] font-bold mb-3">2024 – 2026</p>
-              <p className="font-semibold text-lg">Cornell Tech, Cornell University</p>
+              <p className="text-xs font-mono uppercase tracking-widest text-[#c87960] font-bold mb-3">
+                2024 – 2026
+              </p>
+              <p className="font-semibold text-lg">
+                Cornell Tech, Cornell University
+              </p>
               <p className="text-[#666] mt-1">M.Eng. Computer Science</p>
             </div>
             <div
               className="rounded-xl p-8 bg-[#fdf8f5]"
               style={{ border: "2px solid #b8d4ac" }}
             >
-              <p className="text-xs font-mono uppercase tracking-widest text-[#7a9a68] font-bold mb-3">2018 – 2022</p>
-              <p className="font-semibold text-lg">National University of Singapore</p>
-              <p className="text-[#666] mt-1">B.Eng. Computer Science, Honors with Distinction</p>
+              <p className="text-xs font-mono uppercase tracking-widest text-[#7a9a68] font-bold mb-3">
+                2018 – 2022
+              </p>
+              <p className="font-semibold text-lg">
+                National University of Singapore
+              </p>
+              <p className="text-[#666] mt-1">
+                B.Eng. Computer Science, Honors with Distinction
+              </p>
             </div>
           </div>
         </div>
@@ -303,9 +313,8 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <SectionHeading id="contact" label="Contact" title="Let's Connect" />
           <p className="text-[#666] mb-8 max-w-lg mx-auto">
-            I&apos;m graduating from Cornell Tech in May 2026 and looking for
-            SWE, FDE, or PM roles. I&apos;d love to chat about what I can bring
-            to your team.
+            I&apos;m graduating from Cornell Tech in May 2026. I&apos;d love to
+            chat about what I can bring to your team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

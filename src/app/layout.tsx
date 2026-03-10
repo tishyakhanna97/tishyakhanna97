@@ -6,11 +6,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Tishya Khanna | Software Engineer, AI Builder",
+  title: "Tishya Khanna",
   description:
-    "Cornell Tech M.Eng. CS student building AI-powered products across startups, government, and big tech. SWE / FDE / PM.",
+    "Cornell Tech M.Eng. CS student building AI-powered products across startups, government, and big tech.",
   openGraph: {
-    title: "Tishya Khanna | Software Engineer, AI Builder",
+    title: "Tishya Khanna",
     description:
       "Cornell Tech M.Eng. CS student building AI-powered products across startups, government, and big tech.",
     type: "website",
