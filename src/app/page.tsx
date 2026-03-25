@@ -90,7 +90,7 @@ const skills: Record<string, Skill[]> = {
 
 const experience = [
   {
-    role: "AI Product Operations Manager",
+    role: "AI Engineer (Product Operations)",
     company: "TikTok",
     period: "Feb 2025 – Aug 2025",
     location: "Singapore",
@@ -104,7 +104,7 @@ const experience = [
     bg: "#f5f0e0",
   },
   {
-    role: "Business Partner / Technical PM",
+    role: "Technical Product Manager (Business Partner)",
     company: "EnterpriseSG",
     period: "Aug 2022 – Feb 2025",
     location: "Singapore",
